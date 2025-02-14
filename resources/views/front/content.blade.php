@@ -2,7 +2,7 @@
     @include('front.head')
 	<div class="section">
 		<!-- container -->
-		<div class="container">
+		<div class="">
 			<!-- row -->
 			<div id="hot-post" class="row hot-post">
 				<div class="col-md-8 hot-post-left">

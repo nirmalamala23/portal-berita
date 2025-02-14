@@ -21,13 +21,16 @@
         </div>
 
         <div class="form-group">
-            <label>Tipe User</label>
-            <select class="form-control" name="type">
+            <label for="role_id">Tipe User</label>
+            <select class="form-control" name="role_id">
                 <option value="" holder>Pilih Tipe User</option>
-                <option value="0" holder>Journalist</option>
-                <option value="1" holder>Admin</option>
+                @foreach ($roles as $role)
+                    <option value="{{ $role->id }}">{{ $role->name }}</option>
+                @endforeach
             </select>
         </div>
+        
+        
 
         <div class="form-group">
             <label for="password">Password</label>

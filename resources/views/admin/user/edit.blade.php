@@ -31,20 +31,17 @@
 
         <div class="form-group">
             <label>Tipe User</label>
-            <select class="form-control" name="type">
+            <select class="form-control" name="role_id">
                 <option value="" holder>Pilih Tipe User</option>
-                <option value="1" holder
-                @if($user->type == 1)
-                selected
-                @endif
-                >Admin</option>
-                <option value="0" holder
-                @if($user->type == 0)
-                selected
-                @endif
-                >Journalist</option>
+                @foreach ($roles as $role)
+                    <option value="{{ $role->id }}" 
+                        @if ($role->id == $user->role_id) selected @endif>
+                        {{ $role->name }}
+                    </option>
+                @endforeach
             </select>
         </div>
+        
 
         <div class="form-group">
             <label for="password">Password</label>

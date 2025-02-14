@@ -10,9 +10,17 @@ use App\Http\Controllers\CategoriesController;
 
 Route::get('/', [BlogController::class, 'index']);
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'authentication']);
+Route::get('/berita', [AuthController::class, 'login'])->name('login');
+Route::post('/berita', [AuthController::class, 'authentication']);
 Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::get('/admin', function () {
+    return view('dashboard.admin');
+});
+
+Route::get('/journalist', function () {
+    return view('dashboard.journalist');
+});
 
 Route::get('/home', function () {
     return view('back.home');

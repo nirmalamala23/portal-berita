@@ -18,7 +18,7 @@
             <th>No</th>
             <th>Nama User</th>
             <th>Email</th>
-            <th>Type</th>
+            <th>Role</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -29,18 +29,15 @@
             <td>{{ $hasil->name }}</td>
             <td>{{ $hasil->email }}</td>
             <td>
-                @if($hasil->type)
-                    <span class="badge badge-info">Admin</span>
-                @else
-                    <span class="badge badge-warning">Journalist</span>
-                @endif
+                {{ $hasil->role ? $hasil->role->name : 'Tidak ada role' }}
             </td>
+            
             <td>
                 <form action="{{ route('user.destroy', $hasil->id)}}" method="POST">
                     @csrf
                     @method('delete')
                 <a href="{{ route('user.edit', $hasil->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                <button type="submit" class="btn btn-danger btn-sm">Delete</buttom>
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
             </form>
             </td>
         </tr>

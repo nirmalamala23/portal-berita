@@ -5,7 +5,7 @@
 @section('content')
 <div class="login-box">
     <h2 class="text-center mb-4">Login</h2>
-    <form action="{{ url('/login') }}" method="POST">
+    <form action="{{ url('/berita') }}" method="POST">
         @csrf
         @if($errors->any())
             <div class="alert alert-danger">

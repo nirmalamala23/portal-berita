@@ -56,15 +56,6 @@
 			<!-- Top Nav -->
 			<div id="nav-top">
 				<div class="container">
-					<!-- social -->
-					<ul class="nav-social">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					</ul>
-					<!-- /social -->
-
 					<!-- logo -->
 					<div class="nav-logo">
 						<a href="" class="logo"><img src="{{ asset('front/img/logo.png') }}" alt=""></a>
@@ -75,7 +66,6 @@
 					<div class="nav-btns">
 						<button class="aside-btn"><i class="fa fa-bars"></i></button>
 						<button class="search-btn"><i class="fa fa-search"></i></button>
-						<a class="btn btn-primary" href="{{ route('login')}}" role="button">Login</a>
 						<div id="nav-search">
 							<form action="{{ route('blog.search') }}" method="get">
 								<input class="input" name="search" placeholder="Enter your search...">
@@ -102,7 +92,7 @@
 								<div class="dropdown-body">
 									<ul class="dropdown-list">
 										@foreach ($categories_widget as $result1)											
-										<li><a href="category.html">{{ $result1->name }}</a></li>
+										<li><a href="{{ route('blog.categories', $result1->slug)}}" >{{ $result1->name }}</a></li>
 										@endforeach
 									</ul>
 								</div>

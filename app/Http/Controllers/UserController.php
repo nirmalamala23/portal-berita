@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +14,8 @@ class UserController extends Controller
     public function index()
     {
         $user = User::paginate(10);
-        return view('admin.user.index', compact('user'));
+        $roles = Role::all(); // Mengambil semua data role
+        return view('admin.user.index', compact('user','roles'));
     }
 
     /**
@@ -21,10 +23,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create');
-
-
+        $roles = Role::all(); // Mengambil semua data role
+        return view('admin.user.create', compact('roles'));
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -33,28 +35,21 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|max:100',
-            'email' => 'required|email',
-            'type' => 'required' 
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6',
+            'role_id' => 'required|exists:roles,id',
         ]);
-
-        if ($request->input('password')) { 
-            $password = bcrypt($request->password);
-        } 
-        else 
-        {
-            $password = bcrypt('1234');
-        }
-
+    
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'type' =>  $request->type, 
-            'password' => $password
+            'password' => bcrypt($request->password),
+            'role_id' => $request->role_id,
         ]);
-
-        return redirect()->route('user.index')->with('success', 'User Berhasil Disimpan');
+       
+        return redirect()->route('user.index')->with('success', 'User berhasil ditambahkan.');
     }
-
+    
     /**
      * Display the specified resource.
      */
@@ -68,10 +63,11 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        $user = User::find($id);
-        return view('admin.user.edit', compact('user'));
+        $roles = Role::all(); // Mengambil semua data role
+        $user = User::findOrFail($id);
+        return view('admin.user.edit', compact('user','roles'));
     }
-
+    
     /**
      * Update the specified resource in storage.
      */
@@ -79,37 +75,35 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|max:100',
-            'type' => 'required' 
+            
+            'role_id' => 'nullable',
+
         ]);
-
-        if($request->input('password')) {
-            $user_data = [
-                'name' => $request->name,
-                'type' => $request->type,
-                'password' => bcrypt($request->password)
-            ];
+    
+        $user = User::findOrFail($id);
+    
+        $user_data = [
+            'name' => $request->name,
+            'role_id' => $request->role_id,
+        ];
+    
+        if ($request->filled('password')) {
+            $user_data['password'] = bcrypt($request->password);
         }
-        else{
-            $user_data = [
-                'name' => $request->name,
-                'type' => $request->type
-            ];
-        }
-
-        $user = User::find($id);
+    
         $user->update($user_data);
-
+    
         return redirect()->route('user.index')->with('success', 'Berhasil Diupdate');
     }
-
+    
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        $user = User::find($id);
+        $user = User::findOrFail($id);
         $user->delete();
 
-        return redirect()->back()->with('success', 'User Berhasil Dihapus');
-    }
+        return redirect()->route('user.index')->with('success', 'User berhasil dihapus');
+        }
 }

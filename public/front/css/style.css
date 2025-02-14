@@ -1,11 +1,10 @@
 /*
-Template Name: Callie HTML Template
-Author: yaminncco
+
 
 Colors:
 	Body 		  : #505050
 	Headers 	: #11151c
-	Primary 	: #6777ef
+	Primary 	: #4b59e0
 	Dark 		  : #1b1c1e
 	Grey 		  : #e8eaed #97989b #323335
 
@@ -347,7 +346,7 @@ textarea.input {
 
 .nav-logo {
   position: absolute;
-  left: 50%;
+  right: 90%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -416,6 +415,20 @@ textarea.input {
   font-weight: 700;
   padding: 15px 25px;
 }
+
+.btn-login-custom {
+  background-color: #5a6bff;  /* Warna lebih menyala */
+  color: white;
+  font-size: 16px;   /* Ukuran font sedikit lebih kecil */
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-login-custom:hover {
+  background-color: #4b59e0; /* Warna hover lebih gelap */
+  color: #fff;
+  transform: scale(1.03);
+  }
 
 /*----------------------------*\
 	menu
@@ -1369,8 +1382,8 @@ textarea.input {
 
 #footer {
   margin-top: 40px;
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 30px;
   background-color: #1b1c1e;
 }
 

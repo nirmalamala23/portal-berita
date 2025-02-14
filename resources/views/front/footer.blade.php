@@ -1,21 +1,16 @@
 <!-- FOOTER -->
-<footer id="footer">
+<footer id="footer" class="footer-full">
     <!-- container -->
+   
     <div class="container">
         <!-- row -->
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="footer-widget">
                     <div class="footer-logo">
                         <img src="{{ asset('front/./img/logo.png') }}" alt="" style="width: 150px; height: auto;">
                     </div>
                     <p>Jejak Berita adalah aplikasi yang dibuat khusus untuk mempermudah publikasi berita terkini di website.</p>
-                    <ul class="contact-social">
-                        <li><a href="#" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="social-google-plus"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="social-instagram"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
                 </div>
             </div>
             <div class="col-md-3">
@@ -30,27 +25,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="footer-widget">
-                    <h3 class="footer-title">Tags</h3>
-                    <div class="tags-widget">
-                        <ul>
-                            <li><a href="#">Teknologi</a></li>
-                            <li><a href="#">SEO</a></li>
-                            <li><a href="#">Umum</a></li>
-                            <li><a href="#">Domain dan Hosting</a></li>
-                            <li><a href="#">Entertaiment</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
+            
+            <div class="col-md-5">
                 <div class="footer-widget">
                     <h3 class="footer-title">Kirim Pesan</h3>
                     <div class="newsletter-widget">
                         <form>
                             <p>Berikan Kritik dan Saran Anda Disini</p>
-                            <input class="input" name="newsletter" placeholder="Enter Your Email">
+                            <input class="input" name="newsletter" placeholder="Kirim Kritik & Saran">
                             <button class="primary-button">Submit</button>
                         </form>
                     </div>
@@ -62,24 +44,24 @@
 
         <!-- row -->
         <div class="footer-bottom row">
-            <div class="col-md-6 col-md-push-6">
-                <ul class="footer-nav">
-                    <li><a href="{{ url('') }}">Home</a></li>
-                    <li><a href="">Category</a></li>
-                    <li><a href="{{ route('blog.list') }}">List Post</a></li>
-                </ul>
-            </div>
-            <div class="col-md-6 col-md-pull-6">
-                <div class="footer-copyright">
+            <div class="col-md-4 col-md-push-4">
+                <div class="footer-copyright d-flex justify-content-center align-items-center" style="height: 100%;">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">XII PPLG 1</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
-            </div>
+            </div>         
         </div>
         <!-- /row -->
     </div>
     <!-- /container -->
+    <style>
+        .footer-full {
+    width: 100%;
+    
+}
+
+        </style>
 </footer>
 <!-- /FOOTER -->
 

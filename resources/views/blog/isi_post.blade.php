@@ -11,13 +11,12 @@
 				<div class="row">
 					<div class="col-md-10">
 						<div class="post-category">
-							<a href="category.html">{{ $isi_post->categories->name }}</a>
+							<a href="">{{ $isi_post->categories->name }}</a>
 						</div>
 						<h1> {{ $isi_post->judul }}</h1>
 						<ul class="post-meta">
-							<li><a href="author.html">{{ $isi_post->users->name}}</a></li>
+							<li><a href="">{{ $isi_post->users->name}}</a></li>
 							<li>{{ $isi_post->created_at }}</li>
-							<!-- <li><i class="fa fa-eye"></i> 807</li> -->
 						</ul>
 					</div>
 				</div>

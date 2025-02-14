@@ -61,78 +61,78 @@
 
       @include('back.sidebar')
 
-      <!-- Main Content -->
-      <div class="main-content">
-        <section class="section">
-          <div class="row">
-            <!-- Card 1 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-primary">
-                  <i class="fas fa-newspaper"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Post</h4>
-                  </div>
-                  <div class="card-body">
-                    120
-                  </div>
-                </div>
+    <!-- Main Content -->
+    <div class="main-content">
+      <section class="section">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-primary">
+                <i class="far fa-user"></i>
               </div>
-            </div>
-          
-            <!-- Card 2 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-danger">
-                  <i class="fas fa-eye"></i>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Total User</h4>
                 </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Kategori</h4>
-                  </div>
-                  <div class="card-body">
-                    4500
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Card 3 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-warning">
-                  <i class="fas fa-comments"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Tag</h4>
-                  </div>
-                  <div class="card-body">
-                    350
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <!-- Card 4 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-              <div class="card card-statistic-1">
-                <div class="card-icon bg-success">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total User</h4>
-                  </div>
-                  <div class="card-body">
-                    150
-                  </div>
+                <div class="card-body">
+                  2
                 </div>
               </div>
             </div>
           </div>
+        
+          <!-- Card 2 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-danger">
+                <i class="far fa-newspaper"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Total Berita</h4>
+                </div>
+                <div class="card-body">
+                  10
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Card 3 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-warning">
+                <i class="far fa-file"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Total Kategori</h4>
+                </div>
+                <div class="card-body">
+                  5
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Card 4 -->
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+              <div class="card-icon bg-success">
+                <i class="fas fa-circle"></i>
+              </div>
+              <div class="card-wrap">
+                <div class="card-header">
+                  <h4>Total Tag</h4>
+                </div>
+                <div class="card-body">
+                  9
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
           
           <!-- Grafik -->
           <div class="row">

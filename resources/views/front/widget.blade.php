@@ -16,19 +16,19 @@
                 <li>
                     <a href="#" class="social-facebook">
                         <i class="fa fa-facebook"></i>
-                        <span>20.25K<br>Followers</span>
+                        <span>24K<br>Followers</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="social-twitter">
                         <i class="fa fa-twitter"></i>
-                        <span>20.25K<br>Followers</span>
+                        <span>24K<br>Followers</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="social-google-plus">
                         <i class="fa fa-google-plus"></i>
-                        <span>20.25kK<br>Followers</span>
+                        <span>24K<br>Followers</span>
                     </a>
                 </li>
             </ul>
@@ -73,7 +73,7 @@
         </div>
         <!-- post -->
         <div class="post post-widget">
-            <a class="post-img" href=""><img src="{{ asset('front/./img/widget-3.jpg') }}" alt="">
+            <a class="post-img" href=""><img src="{{ asset('front/./img/widget-3.jpg') }}" alt=""></a>
             <div class="post-body">
                 <div class="post-category">
                     <a href="">Teknologi</a>
@@ -88,7 +88,6 @@
             <a class="post-img" href=""><img src="{{ asset('front/./img/widget-2.jpg') }}" alt=""></a>
             <div class="post-body">
                 <div class="post-category">
-                    <a href="">Teknologi</a>
                     <a href="">SEO</a>
                 </div>
                 <h3 class="post-title"><a href="">5 Strategi SEO Terbaik untuk Meningkatkan Peringkat Website Anda di 2025</a></h3>
@@ -113,7 +112,6 @@
             <a class="post-img" href=""><img src="{{ asset('front/./img/widget-5.jpg') }}" alt=""></a>
             <div class="post-body">
                 <div class="post-category">
-                    <a href="">Umum</a>
                     <a href="">Entertaiment</a>
                 </div>
                 <h3 class="post-title"><a href="">5 Film Terbaru yang Wajib Ditonton di Tahun Ini</a></h3>

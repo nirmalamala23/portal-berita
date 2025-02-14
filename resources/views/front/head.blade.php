@@ -110,7 +110,7 @@
 			<div id="nav-aside">
 				<ul class="nav-aside-menu">
 					<li><a href="{{ url('') }}">Home</a></li>
-						<li><a href="#">Categories</a>
+						<li><a href="">Categories</a>
 						<ul class="dropdown">
 							<li><a href="{{ route('blog.list') }}">List Post</a></li>
 						</ul>

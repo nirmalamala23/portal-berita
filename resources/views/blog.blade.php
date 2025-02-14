@@ -7,7 +7,7 @@
     <a class="post-img" href=""><img src="{{ asset('front/img/hot-post-1.jpg') }}" alt=""></a>
     <div class="post-body">
         <div class="post-category">
-            <a href="">Umum</a>
+            <a href="">Bisnis</a>
         </div>
         <h3 class="post-title title-lg"><a href="">Cara Efektif Mengatur Keuangan di Tengah Krisis Ekonomi</a></h3>
         <ul class="post-meta">
@@ -24,7 +24,7 @@
         <a class="post-img" href=""><img src="{{ asset('front/img/hot-post-2.jpg') }}" alt=""></a>
         <div class="post-body">
             <div class="post-category">
-                <a href="">Lifestyle</a>
+                <a href="">Entertaiment</a>
             </div>
             <h3 class="post-title"><a href=""> Daftar Game Online Populer yang Seru Dimainkan Bersama Teman</a></h3>
             <ul class="post-meta">
@@ -41,7 +41,6 @@
         <div class="post-body">
             <div class="post-category">
                 <a href="">Umum</a>
-                <a href="">Entertaiment</a>
             </div>
             <h3 class="post-title"><a href="">Tren Kuliner Sehat yang Sedang Digemari di Tahun Ini</a></h3>
             <ul class="post-meta">

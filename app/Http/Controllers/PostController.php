@@ -129,7 +129,7 @@ class PostController extends Controller
         $post = Posts::findOrfail($id);
         $post->delete();
 
-        return redirect()->back()->with('success', 'Post Berhasil di Hapus (Silahkan Cek Trashed Post');
+        return redirect()->back()->with('success', 'Post Berhasil di Hapus (Silahkan Cek Trashed Post)');
     }
 
     public function tampil_delete()
